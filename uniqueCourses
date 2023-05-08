@@ -1,0 +1,7 @@
+public List<Course> getUniqueCourses(List<Student> students) {
+    Set<Course> uniqueCourses = new HashSet<>();
+    for (Student student : students) {
+        uniqueCourses.addAll(student.getAllCourses());
+    }
+    return new ArrayList<>(uniqueCourses);
+}

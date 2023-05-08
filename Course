@@ -1,0 +1,9 @@
+public List<Student> getStudentsOnCourse(List<Student> students, Course course) {
+    List<Student> studentsOnCourse = new ArrayList<>();
+    for (Student student : students) {
+        if (student.getAllCourses().contains(course)) {
+            studentsOnCourse.add(student);
+        }
+    }
+    return studentsOnCourse;
+}
